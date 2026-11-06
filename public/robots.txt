@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /s/
+Disallow: /api/
+Sitemap: https://daechiskills.vercel.app/sitemap.xml

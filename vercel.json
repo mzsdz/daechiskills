@@ -1,0 +1,159 @@
+{
+  "buildCommand": "",
+  "outputDirectory": "public",
+  "framework": null,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://*.supabase.co wss://*.supabase.co; object-src 'none'; frame-src https://www.suneung.re.kr; worker-src 'self'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/exam-images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/school-directory/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
+      "source": "/index.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/skills/complex-rotation",
+      "destination": "/skills-complex-rotation.html"
+    },
+    {
+      "source": "/skills/quartic-kice-240621",
+      "destination": "/skills-quartic-kice-240621.html"
+    },
+    {
+      "source": "/skills/cubic-ratios",
+      "destination": "/skills-cubic-ratios.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms.html"
+    },
+    {
+      "source": "/skills/school",
+      "destination": "/skills-school.html"
+    },
+    {
+      "source": "/optimized-solutions",
+      "destination": "/optimized-solutions.html"
+    },
+    {
+      "source": "/optimized-solutions/kice-2024-09-10",
+      "destination": "/optimized-kice-2024-09-10.html"
+    },
+    {
+      "source": "/optimized-solutions/education-2025-06-g2-29",
+      "destination": "/optimized-education-2025-06-g2-29.html"
+    },
+    {
+      "source": "/skills/circle-triangle",
+      "destination": "/skills-circle-triangle.html"
+    },
+    {
+      "source": "/skills",
+      "destination": "/skills-index.html"
+    },
+    {
+      "source": "/skills/quadratic-tangents",
+      "destination": "/skills-quadratic-tangents.html"
+    },
+    {
+      "source": "/skills/areas",
+      "destination": "/skills-area.html"
+    },
+    {
+      "source": "/s/:token",
+      "destination": "/api/share?token=:token"
+    },
+    {
+      "source": "/solutions",
+      "destination": "/api/public-content?view=index"
+    },
+    {
+      "source": "/solutions/:id",
+      "destination": "/api/public-content?view=solution&id=:id"
+    },
+    {
+      "source": "/problems/:id",
+      "destination": "/api/public-content?view=problem&id=:id"
+    },
+    {
+      "source": "/exams",
+      "destination": "/api/public-content?view=exams"
+    },
+    {
+      "source": "/exams/:id",
+      "destination": "/api/public-content?view=exam&id=:id"
+    },
+    {
+      "source": "/media/solutions/:id",
+      "destination": "/api/public-content?view=solution-image&id=:id"
+    },
+    {
+      "source": "/media/problems/:id",
+      "destination": "/api/public-content?view=problem-image&id=:id"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/api/public-content?view=sitemap"
+    }
+  ],
+  "installCommand": ""
+}
