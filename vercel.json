@@ -67,6 +67,10 @@
   ],
   "rewrites": [
     {
+      "source": "/skills/lhopital",
+      "destination": "/skills-lhopital.html"
+    },
+    {
       "source": "/skills/complex-rotation",
       "destination": "/skills-complex-rotation.html"
     },
