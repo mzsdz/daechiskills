@@ -67,6 +67,14 @@
   ],
   "rewrites": [
     {
+      "source": "/concept-dictionary/definitions",
+      "destination": "/dictionary-definitions.html"
+    },
+    {
+      "source": "/concept-dictionary/theorems",
+      "destination": "/dictionary-theorems.html"
+    },
+    {
       "source": "/skills/lhopital",
       "destination": "/skills-lhopital.html"
     },
