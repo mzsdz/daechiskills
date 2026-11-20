@@ -66,6 +66,8 @@
     }
   ],
   "rewrites": [
+    {"source": "/locker", "destination": "/index.html"},
+    {"source": "/n/:slug", "destination": "/index.html"},
     {
       "source": "/concept-dictionary/definitions",
       "destination": "/dictionary-definitions.html"
