@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360" role="img" aria-labelledby="title desc">
+  <title id="title">6분의 공식의 두 거리</title>
+  <desc id="desc">두 교점 α, β 사이에서 x를 잡고 세로 높이와 양쪽 교점까지의 가로 거리를 표시한 그림.</desc>
+  <path fill="#f5f6f1" d="M0 0h720v360H0z"/>
+  <path d="M124 224 Q360 -72 596 164Z" fill="#cde4df"/>
+  <path d="M80 229.59 640 158.41" stroke="#596e70" stroke-width="3" fill="none"/>
+  <path d="M124 224 Q360 -72 596 164" stroke="#203e45" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M360 61V194" stroke="#17655c" stroke-width="6" stroke-linecap="round"/>
+  <path d="M124 232v25 M360 202v55 M596 172v85" stroke="#607777" stroke-width="2" stroke-dasharray="4 5"/>
+  <g fill="#203e45">
+    <circle cx="124" cy="224" r="6"/>
+    <circle cx="596" cy="164" r="6"/>
+  </g>
+  <path d="M124 287H596 M124 280v14 M360 280v14 M596 280v14" stroke="#607777" stroke-width="2" fill="none"/>
+  <g fill="#203e45" font-family="Georgia,serif" font-style="italic" font-size="28" text-anchor="middle">
+    <text x="124" y="266">α</text><text x="360" y="266">x</text><text x="596" y="266">β</text>
+    <text x="242" y="324">x − α</text><text x="478" y="324">β − x</text>
+  </g>
+</svg>

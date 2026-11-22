@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360" role="img" aria-labelledby="title desc">
+  <title id="title">세 교점 사이의 삼차함수 넓이</title>
+  <desc id="desc">차이함수가 α, β, γ에서 축을 통과합니다. 왼쪽의 초록 영역은 폭 p, 오른쪽의 주황 영역은 폭 q입니다.</desc>
+  <path fill="#f5f6f1" d="M0 0h720v360H0z"/>
+  <path d="M112 152 C182 58.74 252 98.87 322 152Z" fill="#cde4df"/>
+  <path d="M322 152 C414.67 222.33 507.33 315.43 600 152Z" fill="#efdac7"/>
+  <path d="M56 152H664" stroke="#596e70" stroke-width="3"/>
+  <path d="M70 224.92 C260.33 -186.82 450.67 565.63 641 62.06" stroke="#203e45" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M112 160V249 M322 160V249 M600 160V249" stroke="#607777" stroke-width="2" stroke-dasharray="4 5"/>
+  <g fill="#203e45">
+    <circle cx="112" cy="152" r="6"/> <circle cx="322" cy="152" r="6"/> <circle cx="600" cy="152" r="6"/>
+  </g>
+  <path d="M112 287H600 M112 280v14 M322 280v14 M600 280v14" stroke="#607777" stroke-width="2" fill="none"/>
+  <g fill="#203e45" font-family="Georgia,serif" font-style="italic" font-size="28" text-anchor="middle">
+    <text x="112" y="267">α</text><text x="322" y="267">β</text><text x="600" y="267">γ</text>
+    <text x="217" y="324">p</text><text x="461" y="324">q</text>
+  </g>
+</svg>
