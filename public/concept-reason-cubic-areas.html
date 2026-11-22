@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>삼차함수 넓이 공식, 모양마다 왜 다를까? | 개념의 이유</title>
+  <meta name="description" content="중근과 단순근, 세 교점, 점대칭, 삼중근과 수직선까지. 6분의 공식에 세 번째 거리를 더해 삼차함수 넓이를 그림과 증명으로 정리합니다.">
+  <link rel="canonical" href="https://daechiskills.com/concept-reasons/cubic-areas">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="삼차함수 넓이 공식, 모양마다 왜 다를까?">
+  <meta property="og:description" content="중근과 단순근, 세 교점, 점대칭, 삼중근과 수직선까지. 6분의 공식에 세 번째 거리를 더해 삼차함수 넓이를 그림과 증명으로 정리합니다.">
+  <meta property="og:url" content="https://daechiskills.com/concept-reasons/cubic-areas">
+  <meta property="og:image" content="https://daechiskills.com/og/daechiskills-share-v2.jpg">
+  <link rel="icon" href="/favicon-v6.svg">
+  <link rel="stylesheet" href="/concept-reasons.css">
+  <link rel="stylesheet" href="/pull-refresh.css">
+  <script type="module" src="/document-pull-refresh.js"></script>
+  <script src="/_vercel/insights/script.js" defer></script>
+</head>
+<body class="reason-page">
+  <header class="reason-header">
+    <a class="reason-brand" href="/">DAECHI <span>/</span> SKILLS</a>
+    <nav aria-label="주 메뉴">
+      <a href="/">기출 손풀이</a>
+      <a href="/#/exams?provider=official">평가원/학평 기출</a>
+      <a href="/concept-reasons" aria-current="true">개념의 이유</a>
+      <a href="/locker">MY</a>
+    </nav>
+  </header>
+  <main class="reason-main">
+    <article class="reason-article reason-cubic">
+      <p class="reason-topic">정적분</p>
+      <h1>삼차함수 넓이 공식, 모양마다 왜 다를까?</h1>
+      <p class="reason-intro">삼차함수와 직선 사이의 넓이는 같은 가로 위치에서 두 그래프가 떨어진 높이를 쌓아 구해요. 6분의 공식에서는 교점까지의 가로 거리가 두 개였죠. 삼차함수에서는 거리가 하나 더 생깁니다. 이 세 번째 거리만 읽을 수 있으면, 그림마다 달라 보이는 공식이 한 원리로 이어져요.</p>
+
+      <h2 id="at-a-glance">네 가지 모양 한눈에 보기</h2>
+      <p>그림의 곡선은 삼차함수에서 직선을 뺀 차이함수 <var>h</var>예요. 축과 만나는 점이 원래 두 그래프의 교점입니다. <var>a</var>는 삼차항의 계수이고, 색칠한 부분의 넓이를 구해요. 가운데에서 축을 통과하면 색칠한 두 넓이를 더합니다.</p>
+      <div class="reason-shapes">
+      <figure class="reason-shape">
+        <figcaption><h3>접점과 교점 사이</h3></figcaption>
+        <svg viewBox="0 0 300 160" role="img" aria-labelledby="cubic-graph-0 cubic-graph-desc-0">
+          <title id="cubic-graph-0">접점과 교점 사이</title>
+          <desc id="cubic-graph-desc-0">왼쪽 α에서 접하고 오른쪽 β에서 통과합니다. 두 근 사이 한 조각을 칠했습니다.</desc>
+          <path d="M56.25 52.32 C121.35 52.32 186.46 141.6 251.56 52.32 L251.56 52.32 H56.25 Z" class="reason-fill"/>
+          <path d="M13 52.32 H288" class="reason-axis"/>
+          <path d="M25 60.27 C108.33 14.93 191.67 186.08 275 12" class="reason-curve"/>
+          <circle cx="56.25" cy="52.32" r="3.25" class="reason-dot"/><circle cx="251.56" cy="52.32" r="3.25" class="reason-dot"/><path d="M56.25 57.32 V103" class="reason-guide"/><path d="M251.56 57.32 V103" class="reason-guide"/>
+          <g class="reason-diagram-label" text-anchor="middle"><text x="56.25" y="118">α</text><text x="251.56" y="118">β</text><path d="M56.25 128v8 M251.56 128v8 M56.25 132H251.56" class="reason-guide"/><text x="153.91" y="151">d</text></g>
+        </svg>
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>h</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>a</mi><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>α</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>β</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">h(x)=a(x-\alpha)^2(x-\beta)</annotation></semantics></math>
+        <div class="reason-shape-formulas"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mo>=</mo><mfrac><mrow><mi mathvariant="normal">∣</mi><mi>a</mi><mi mathvariant="normal">∣</mi><msup><mi>d</mi><mn>4</mn></msup></mrow><mn>12</mn></mfrac></mrow><annotation encoding="application/x-tex">S=\frac{|a|d^4}{12}</annotation></semantics></math></div>
+        <p>접점까지의 거리가 한 번 더 들어가요. d는 두 근 사이 거리예요.</p>
+      </figure>
+      <figure class="reason-shape">
+        <figcaption><h3>세 교점 사이</h3></figcaption>
+        <svg viewBox="0 0 300 160" role="img" aria-labelledby="cubic-graph-1 cubic-graph-desc-1">
+          <title id="cubic-graph-1">세 교점 사이</title>
+          <desc id="cubic-graph-desc-1">왼쪽부터 α, β, γ에서 축을 통과합니다. α와 β 사이를 파란색, β와 γ 사이를 주황색으로 칠했습니다.</desc>
+          <path d="M34.8 41.82 C67.48 -7.81 100.16 13.31 132.84 41.82 L132.84 41.82 H34.8 Z" class="reason-fill"/><path d="M132.84 41.82 C176.96 80.31 221.08 132.27 265.2 41.82 L265.2 41.82 H132.84 Z" class="reason-fill-alt"/>
+          <path d="M13 41.82 H288" class="reason-axis"/>
+          <path d="M25 58.9 C108.33 -105.36 191.67 231.63 275 19.31" class="reason-curve"/>
+          <circle cx="34.8" cy="41.82" r="3.25" class="reason-dot"/><circle cx="132.84" cy="41.82" r="3.25" class="reason-dot"/><circle cx="265.2" cy="41.82" r="3.25" class="reason-dot"/><path d="M34.8 46.82 V103" class="reason-guide"/><path d="M132.84 46.82 V103" class="reason-guide"/><path d="M265.2 46.82 V103" class="reason-guide"/>
+          <g class="reason-diagram-label" text-anchor="middle"><text x="34.8" y="118">α</text><text x="132.84" y="118">β</text><text x="265.2" y="118">γ</text><path d="M34.8 128v8 M132.84 128v8 M34.8 132H132.84" class="reason-guide"/><text x="83.82" y="151">p</text><path d="M132.84 128v8 M265.2 128v8 M132.84 132H265.2" class="reason-guide"/><text x="199.02" y="151">q</text></g>
+        </svg>
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>h</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>a</mi><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>α</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>β</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">h(x)=a(x-\alpha)(x-\beta)(x-\gamma)</annotation></semantics></math>
+        <div class="reason-shape-formulas"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>S</mi><mtext>왼</mtext></msub><mo>=</mo><mfrac><mrow><mi mathvariant="normal">∣</mi><mi>a</mi><mi mathvariant="normal">∣</mi><msup><mi>p</mi><mn>3</mn></msup><mo stretchy="false">(</mo><mi>p</mi><mo>+</mo><mn>2</mn><mi>q</mi><mo stretchy="false">)</mo></mrow><mn>12</mn></mfrac></mrow><annotation encoding="application/x-tex">S_{\mathrm{왼}}=\frac{|a|p^3(p+2q)}{12}</annotation></semantics></math><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>S</mi><mtext>오</mtext></msub><mo>=</mo><mfrac><mrow><mi mathvariant="normal">∣</mi><mi>a</mi><mi mathvariant="normal">∣</mi><msup><mi>q</mi><mn>3</mn></msup><mo stretchy="false">(</mo><mi>q</mi><mo>+</mo><mn>2</mn><mi>p</mi><mo stretchy="false">)</mo></mrow><mn>12</mn></mfrac></mrow><annotation encoding="application/x-tex">S_{\mathrm{오}}=\frac{|a|q^3(q+2p)}{12}</annotation></semantics></math></div>
+        <p>자기 폭을 세제곱. 괄호 안에서는 옆 폭을 두 번 더해요.</p>
+      </figure>
+      <figure class="reason-shape">
+        <figcaption><h3>간격이 같은 세 교점</h3></figcaption>
+        <svg viewBox="0 0 300 160" role="img" aria-labelledby="cubic-graph-2 cubic-graph-desc-2">
+          <title id="cubic-graph-2">간격이 같은 세 교점</title>
+          <desc id="cubic-graph-desc-2">변곡점 β의 왼쪽과 오른쪽에 α와 γ가 같은 거리 r만큼 떨어져 있습니다. 두 색 영역의 넓이는 같습니다.</desc>
+          <path d="M34.26 52 C72.84 -17.29 111.42 17.36 150 52 L150 52 H34.26 Z" class="reason-fill"/><path d="M150 52 C188.58 86.64 227.16 121.29 265.74 52 L265.74 52 H150 Z" class="reason-fill-alt"/>
+          <path d="M13 52 H288" class="reason-axis"/>
+          <path d="M25 70.68 C108.33 -116.34 191.67 220.34 275 33.32" class="reason-curve"/>
+          <circle cx="34.26" cy="52" r="3.25" class="reason-dot"/><circle cx="150" cy="52" r="3.25" class="reason-dot"/><circle cx="265.74" cy="52" r="3.25" class="reason-dot"/><path d="M34.26 57 V103" class="reason-guide"/><path d="M150 57 V103" class="reason-guide"/><path d="M265.74 57 V103" class="reason-guide"/>
+          <g class="reason-diagram-label" text-anchor="middle"><text x="34.26" y="118">α</text><text x="150" y="118">β</text><text x="265.74" y="118">γ</text><path d="M34.26 128v8 M150 128v8 M34.26 132H150" class="reason-guide"/><text x="92.13" y="151">r</text><path d="M150 128v8 M265.74 128v8 M150 132H265.74" class="reason-guide"/><text x="207.87" y="151">r</text></g>
+        </svg>
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>p</mi><mo>=</mo><mi>q</mi><mo>=</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">p=q=r</annotation></semantics></math>
+        <div class="reason-shape-formulas"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>S</mi><mtext>한 쪽</mtext></msub><mo>=</mo><mfrac><mrow><mi mathvariant="normal">∣</mi><mi>a</mi><mi mathvariant="normal">∣</mi><msup><mi>r</mi><mn>4</mn></msup></mrow><mn>4</mn></mfrac></mrow><annotation encoding="application/x-tex">S_{\mathrm{한\ 쪽}}=\frac{|a|r^4}{4}</annotation></semantics></math><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>S</mi><mtext>전체</mtext></msub><mo>=</mo><mfrac><mrow><mi mathvariant="normal">∣</mi><mi>a</mi><mi mathvariant="normal">∣</mi><msup><mi>r</mi><mn>4</mn></msup></mrow><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mi mathvariant="normal">∣</mi><mi>a</mi><mi mathvariant="normal">∣</mi><msup><mi>d</mi><mn>4</mn></msup></mrow><mn>32</mn></mfrac></mrow><annotation encoding="application/x-tex">S_{\mathrm{전체}}=\frac{|a|r^4}{2}=\frac{|a|d^4}{32}</annotation></semantics></math></div>
+        <p>r은 한쪽 폭, d = 2r은 전체 폭. 두 조각의 넓이가 같아요.</p>
+      </figure>
+      <figure class="reason-shape">
+        <figcaption><h3>삼중근에서 수직선까지</h3></figcaption>
+        <svg viewBox="0 0 300 160" role="img" aria-labelledby="cubic-graph-3 cubic-graph-desc-3">
+          <title id="cubic-graph-3">삼중근에서 수직선까지</title>
+          <desc id="cubic-graph-desc-3">α에서 평평하게 축을 통과합니다. β에서는 수직선이 곡선과 축 사이를 닫습니다.</desc>
+          <path d="M70.8 91.11 C134.41 91.11 198.03 91.11 261.64 26.53 L261.64 91.11 H70.8 Z" class="reason-fill"/>
+          <path d="M13 91.11 H288" class="reason-axis"/>
+          <path d="M25 92 C108.33 87.13 191.67 108.85 275 12" class="reason-curve"/>
+          <path d="M261.64 91.11 V26.53" class="reason-height"/><circle cx="70.8" cy="91.11" r="3.25" class="reason-dot"/><path d="M70.8 96.11 V103" class="reason-guide"/><path d="M261.64 96.11 V103" class="reason-guide"/>
+          <g class="reason-diagram-label" text-anchor="middle"><text x="70.8" y="118">α</text><text x="261.64" y="118">β</text><path d="M70.8 128v8 M261.64 128v8 M70.8 132H261.64" class="reason-guide"/><text x="166.22" y="151">d</text></g>
+        </svg>
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>h</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>a</mi><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>α</mi><msup><mo stretchy="false">)</mo><mn>3</mn></msup><mo separator="true">,</mo><mspace width="1em"/><mi>x</mi><mo>=</mo><mi>β</mi></mrow><annotation encoding="application/x-tex">h(x)=a(x-\alpha)^3,\quad x=\beta</annotation></semantics></math>
+        <div class="reason-shape-formulas"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mo>=</mo><mfrac><mrow><mi mathvariant="normal">∣</mi><mi>a</mi><mi mathvariant="normal">∣</mi><msup><mi>d</mi><mn>4</mn></msup></mrow><mn>4</mn></mfrac></mrow><annotation encoding="application/x-tex">S=\frac{|a|d^4}{4}</annotation></semantics></math></div>
+        <p>한 점까지의 거리를 세 번 곱해요. d는 삼중근에서 수직선까지 거리예요.</p>
+      </figure>
+      </div>
+
+      <h2>6분의 공식에 세 번째 거리의 평균을 곱해요</h2>
+      <p>영역의 양끝이 모두 근인 한 조각을 잡아요. 그 폭을 <var>L</var>, 왼쪽 끝에서 잰 거리를 <var>t</var>라 하면, 양끝까지의 거리 곱은 <var>t</var>(<var>L</var> − <var>t</var>)예요. <a href="/concept-reasons/sixth-area">6분의 공식에서 적분한 바로 그 모양</a>이죠. 삼차식의 높이에는 여기에 세 번째 근까지의 거리 <var>D</var>(<var>t</var>)와 계수의 크기 |<var>a</var>|를 곱해요.</p>
+      <p>한 조각 안에는 다른 근이 없으니 <var>D</var>(<var>t</var>)는 일정한 기울기로 변해요. 왼쪽에서 <var>t</var>만큼 간 점과 오른쪽에서 <var>t</var>만큼 간 점에서 <var>t</var>(<var>L</var> − <var>t</var>) 값은 같고, 두 점의 세 번째 거리를 더하면 항상 양 끝에서 잰 세 번째 거리의 합이 돼요. 그래서 양쪽의 띠를 짝지어 더하면, 세 번째 거리를 양 끝 값의 평균으로 놓고 계산해도 넓이가 같아요.</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mo>=</mo><mi mathvariant="normal">∣</mi><mi>a</mi><mi mathvariant="normal">∣</mi><mo>⋅</mo><mfrac><msup><mi>L</mi><mn>3</mn></msup><mn>6</mn></mfrac><mo>⋅</mo><mfrac><mrow><mi>D</mi><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo><mo>+</mo><mi>D</mi><mo stretchy="false">(</mo><mi>L</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">S=|a|\cdot\frac{L^3}{6}\cdot\frac{D(0)+D(L)}{2}</annotation></semantics></math>
+      <p><strong>접점과 교점 사이</strong>에서는 세 번째 근이 접점에 겹쳐요. 세 번째 거리가 양 끝에서 0과 <var>d</var>이므로 6분의 공식에 <var>d</var>/2를 곱하면 분모가 12가 됩니다. 접점이 오른쪽이어도 평균은 같아요.</p>
+      <p><strong>세 교점 사이</strong>에서 <var>p</var> = β − α, <var>q</var> = γ − β라 해볼게요. 왼쪽 조각에서 γ까지의 거리는 α에서 <var>p</var> + <var>q</var>, β에서 <var>q</var>예요. 둘을 더하면 <var>p</var> + 2<var>q</var>가 됩니다. 오른쪽은 같은 방법으로 <var>q</var> + 2<var>p</var>가 나와요. 두 간격이 <var>r</var>로 같으면 괄호가 3<var>r</var>이어서, 각 조각의 분모 12가 4로 줄어요.</p>
+
+      <h2>삼중근과 수직선 사이에서는 왜 분모가 4일까?</h2>
+      <p>세 근이 α에 겹치므로, α에서 가로로 <var>t</var>만큼 떨어진 곳의 높이는 |<var>a</var>|<var>t</var>³이에요. 수직선까지의 거리 <var>d</var>에 도달할 때까지 이 높이를 쌓습니다. 미적분학의 기본정리를 쓰면 <var>t</var>³의 원시함수 <var>t</var>⁴/4에서 분모 4가 바로 나와요.</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mo>=</mo><mi mathvariant="normal">∣</mi><mi>a</mi><mi mathvariant="normal">∣</mi><msubsup><mo>∫</mo><mn>0</mn><mi>d</mi></msubsup><msup><mi>t</mi><mn>3</mn></msup><mtext> </mtext><mi mathvariant="normal">d</mi><mi>t</mi><mo>=</mo><mfrac><mrow><mi mathvariant="normal">∣</mi><mi>a</mi><mi mathvariant="normal">∣</mi><msup><mi>d</mi><mn>4</mn></msup></mrow><mn>4</mn></mfrac></mrow><annotation encoding="application/x-tex">S=|a|\int_0^d t^3\,\mathrm dt=\frac{|a|d^4}{4}</annotation></semantics></math>
+      <p>점대칭 그림의 ‘4분의 1’은 <strong>한쪽 교점 사이의 폭</strong>, 삼중근 그림의 ‘4분의 1’은 <strong>삼중근에서 수직선까지의 폭</strong>을 사용해요. 문제를 풀 때는 숫자 4보다 그림에서 어느 구간의 폭을 재는지부터 확인해 보세요.</p>
+      <p class="reason-return"><a href="/concept-reasons">← 개념의 이유 목록</a></p>
+    </article>
+  </main>
+</body>
+</html>

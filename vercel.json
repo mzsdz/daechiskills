@@ -83,6 +83,10 @@
       "destination": "/concept-reason-sixth-area.html"
     },
     {
+      "source": "/concept-reasons/cubic-areas",
+      "destination": "/concept-reason-cubic-areas.html"
+    },
+    {
       "source": "/skills/lhopital",
       "destination": "/skills-lhopital.html"
     },

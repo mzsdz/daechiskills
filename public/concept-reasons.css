@@ -40,3 +40,15 @@
 .reason-math-label { fill: #263b54; font: italic 20px serif; }
 .reason-figure-label { fill: #873521; font-size: 16px; font-weight: 650; }
 .reason-return { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid #dcd9d2; }
+
+.reason-card + .reason-card { margin-top: 1rem; }
+.reason-shapes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; margin: 1.3rem 0 2.2rem; }
+.reason-article .reason-shape { margin: 0; padding: .9rem 1rem; }
+.reason-shape h3 { margin: 0; color: #252a35; font-size: 1.08rem; }
+.reason-shape p { margin: .65rem 0 .15rem; font-size: .92rem; line-height: 1.55; }
+.reason-article .reason-shape math { margin: .5rem 0; font-size: clamp(.94rem, 3.65vw, 1.1rem); }
+.reason-shape-formulas { border-top: 1px solid #dcd9d2; margin-top: .65rem; padding-top: .25rem; }
+.reason-fill-alt { fill: #f3dbc7; }
+.reason-axis { stroke: #657285; stroke-width: 1.1; }
+.reason-diagram-label { fill: #263b54; font: italic 17px serif; }
+@media (max-width: 620px) { .reason-shapes { grid-template-columns: 1fr; } }
