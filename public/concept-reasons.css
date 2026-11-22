@@ -56,3 +56,43 @@
 .reason-axis { stroke: #657285; stroke-width: 1.1; }
 .reason-diagram-label { fill: #263b54; font: italic 17px serif; }
 @media (max-width: 620px) { .reason-shapes, .reason-cards { grid-template-columns: 1fr; } }
+
+@media (max-width: 600px) {
+  .reason-page { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+  .reason-header nav {
+    position: fixed;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 29;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(max-content, 1fr));
+    gap: 4px;
+    box-sizing: border-box;
+    min-height: 72px;
+    padding: 8px max(8px, env(safe-area-inset-right)) calc(9px + env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+    border-top: 1px solid #dedfd5;
+    background: #fffefa;
+  }
+  .reason-header nav > a {
+    display: grid;
+    place-items: center;
+    min-height: 44px;
+    padding-inline: 3px;
+    border-radius: 8px;
+    color: #56615a;
+    font-size: clamp(11.5px, 3.35vw, 13px);
+    font-weight: 750;
+    line-height: 1.3;
+    white-space: nowrap;
+  }
+  .reason-header nav > a[aria-current] {
+    background: #e5efe9;
+    color: #205b50;
+    box-shadow: inset 0 -3px #205b50;
+    text-decoration: none;
+  }
+  .reason-header nav > a:focus-visible {
+    outline: 2px solid #205b50;
+    outline-offset: -2px;
+  }
+}
