@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360" role="img" aria-labelledby="title description">
+  <title id="title">이차함수의 두 근 사이 넓이</title>
+  <desc id="description">두 근 α와 β 사이에서 포물선과 x축이 둘러싼 영역 S를 색칠했습니다.</desc>
+  <path d="M0 0h720v360H0z" fill="#f5f6f1"/>
+  <path d="M124 224Q360 -60 596 224Z" fill="#cde4df"/>
+  <path d="M64 224H656" stroke="#596e70" stroke-width="3"/>
+  <path d="M82 279.04Q360 -115.04 638 279.04" stroke="#203e45" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <g fill="#203e45">
+    <circle cx="124" cy="224" r="6"/>
+    <circle cx="596" cy="224" r="6"/>
+  </g>
+  <g fill="#203e45" font-family="Georgia,serif" font-style="italic" text-anchor="middle">
+    <text x="360" y="167" fill="#17655c" font-size="40">S</text>
+    <text x="124" y="261" font-size="30">α</text>
+    <text x="596" y="261" font-size="30">β</text>
+    <text x="653" y="209" font-size="25">x</text>
+  </g>
+</svg>
