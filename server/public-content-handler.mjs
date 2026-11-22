@@ -2,7 +2,7 @@ import {withDocumentPullRefresh} from '../shared/pull-refresh-html.mjs';
 import {difficultyTag,normalizeDifficulty} from '../shared/exam-difficulty.mjs';
 import {standardSolutionTitle,inferSourceIdentity,sourceNames} from '../shared/source-identity.mjs';
 import {readFile} from 'node:fs/promises';
-const site='https://daechiskills.vercel.app',uuid=/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
+const site='https://daechiskills.com',uuid=/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let assetManifest;
 async function officialImage(p){const d=p.source_details||{};if(/^\/exam-images\/education\/q-[a-f0-9]{24}\.webp$/.test(d.asset_path||''))return d.asset_path;
