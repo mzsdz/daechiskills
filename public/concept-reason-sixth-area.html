@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>6분의 공식에서 왜 6으로 나눌까? | 개념의 이유</title>
+  <meta name="description" content="포물선과 직선 사이의 넓이를 구하는 6분의 공식을 두 교점까지의 거리 곱과 미적분학의 기본정리로 증명합니다.">
+  <link rel="canonical" href="https://daechiskills.vercel.app/concept-reasons/sixth-area">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="6분의 공식에서 왜 6으로 나눌까?">
+  <meta property="og:description" content="두 교점까지의 거리 곱으로 읽는 포물선과 직선 사이의 넓이.">
+  <meta property="og:url" content="https://daechiskills.vercel.app/concept-reasons/sixth-area">
+  <meta property="og:image" content="https://daechiskills.vercel.app/og/daechiskills-share-v2.jpg">
+  <link rel="icon" href="/favicon-v6.svg">
+  <link rel="stylesheet" href="/concept-reasons.css">
+  <link rel="stylesheet" href="/pull-refresh.css">
+  <script type="module" src="/document-pull-refresh.js"></script>
+  <script src="/_vercel/insights/script.js" defer></script>
+</head>
+<body class="reason-page">
+  <header class="reason-header">
+    <a class="reason-brand" href="/">DAECHI <span>/</span> SKILLS</a>
+    <nav aria-label="주 메뉴">
+      <a href="/">기출 손풀이</a>
+      <a href="/#/exams?provider=official">평가원/학평 기출</a>
+      <a href="/concept-reasons" aria-current="true">개념의 이유</a>
+      <a href="/locker">MY</a>
+    </nav>
+  </header>
+  <main class="reason-main">
+    <article class="reason-article">
+      <p class="reason-topic">정적분</p>
+      <h1>6분의 공식에서 왜 6으로 나눌까?</h1>
+      <p class="reason-intro">6분의 공식은 포물선과 직선이 두 점에서 만날 때, 그 사이의 넓이를 두 교점의 가로 간격과 이차항의 계수로 구하는 공식이에요. 교점 사이의 아무 곳에서나 세로선을 그어 보세요. 신기하게도 그 선의 길이는 양쪽 교점까지의 가로 거리 두 개를 곱한 값에 비례합니다.</p>
+      <figure>
+        <svg viewBox="0 0 440 238" role="img" aria-labelledby="area-title area-description">
+          <title id="area-title">포물선과 직선 사이의 높이</title>
+          <desc id="area-description">두 그래프가 만나는 곳의 가로 좌표는 α와 β입니다. 그 사이에 임의의 x를 잡아 두 그래프 사이의 세로 높이와 양쪽 교점까지의 가로 거리를 표시했습니다.</desc>
+          <path d="M65 147 Q220 -72 375 95 Z" class="reason-fill"/>
+          <path d="M65 147 Q220 -72 375 95 M42 151 L394 92" class="reason-curve"/>
+          <path d="M65 147 V171 M191 33 V171 M375 95 V171" class="reason-guide"/>
+          <path d="M191 33 V126" class="reason-height"/>
+          <circle cx="65" cy="147" r="4" class="reason-dot"/>
+          <circle cx="375" cy="95" r="4" class="reason-dot"/>
+          <path d="M65 194 H191 M191 194 H375 M65 189 V199 M191 189 V199 M375 189 V199" class="reason-guide"/>
+          <g text-anchor="middle" class="reason-math-label">
+            <text x="65" y="184">α</text>
+            <text x="191" y="184">x</text>
+            <text x="375" y="184">β</text>
+            <text x="128" y="220">x − α</text>
+            <text x="283" y="220">β − x</text>
+          </g>
+          <text x="204" y="83" class="reason-figure-label">높이 차</text>
+        </svg>
+        <figcaption>두 교점의 가로 좌표는 α, β입니다. 진하게 표시한 세로 길이가 두 그래프 사이의 높이예요.</figcaption>
+      </figure>
+
+      <h2>두 교점이 높이의 모양을 정해요</h2>
+      <p>이차함수 <var>f</var>에서 일차함수 <var>g</var>를 빼면 여전히 이차함수예요. 두 그래프가 만나는 곳에서는 <var>f</var>와 <var>g</var>의 값이 같으니, 그 차의 두 근은 교점의 <var>x</var>좌표인 α, β입니다. α &lt; β이고 이차항의 계수가 <var>a</var>라면 인수정리에 따라 이렇게 쓸 수 있어요.</p>
+      <math display="block">
+        <mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>−</mo><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>a</mi><mo>(</mo><mi>x</mi><mo>−</mo><mi>α</mi><mo>)</mo><mo>(</mo><mi>x</mi><mo>−</mo><mi>β</mi><mo>)</mo>
+      </math>
+      <p>교점 사이에서 왼쪽까지의 가로 거리는 <var>x</var> − α, 오른쪽까지의 가로 거리는 β − <var>x</var>예요. 어느 그래프가 위에 있든 높이는 두 함수의 차의 절댓값이므로 <strong>|<var>a</var>| × (왼쪽 거리) × (오른쪽 거리)</strong>가 됩니다. 이차식에 인수가 두 개 있던 것이 그림에서는 거리 두 개로 보이는 거예요. 이 원리는 더 높은 차수에도 이어집니다. 예를 들어 서로 다른 세 근을 가진 삼차식은, 각 근을 빼서 만든 일차인수 세 개에 최고차항의 계수를 곱한 형태예요.</p>
+
+      <h2>거리의 곱을 쌓으면 분모에 6이 나와요</h2>
+      <p>교점 사이의 가로 간격을 <var>L</var> = β − α라고 하고, 왼쪽에서부터 잰 거리를 <var>t</var>라고 해볼게요. 오른쪽까지 남은 거리는 <var>L</var> − <var>t</var>예요. 이 높이로 만든 가느다란 띠를 왼쪽 끝에서 오른쪽 끝까지 쌓으면 넓이 <var>S</var>가 됩니다.</p>
+      <math display="block">
+        <mi>S</mi><mo>=</mo><mo>|</mo><mi>a</mi><mo>|</mo>
+        <msubsup><mo>∫</mo><mn>0</mn><mi>L</mi></msubsup>
+        <mi>t</mi><mo>(</mo><mi>L</mi><mo>−</mo><mi>t</mi><mo>)</mo><mi mathvariant="normal">d</mi><mi>t</mi>
+      </math>
+      <p>미적분학의 기본정리를 쓰면 정적분을 <strong>원시함수의 오른쪽 끝 값에서 왼쪽 끝 값을 빼는 계산</strong>으로 바꿀 수 있어요. <var>Lt</var> − <var>t</var>²의 원시함수에 <var>L</var>과 0을 넣어 봅시다.</p>
+      <math display="block">
+        <mi>S</mi><mo>=</mo><mo>|</mo><mi>a</mi><mo>|</mo>
+        <msubsup><mrow><mo>[</mo><mfrac><mrow><mi>L</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac><mo>−</mo><mfrac><msup><mi>t</mi><mn>3</mn></msup><mn>3</mn></mfrac><mo>]</mo></mrow><mn>0</mn><mi>L</mi></msubsup>
+      </math>
+      <math display="block">
+        <mo>=</mo><mo>|</mo><mi>a</mi><mo>|</mo><msup><mi>L</mi><mn>3</mn></msup>
+        <mo>(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>−</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>)</mo>
+        <mo>=</mo><mfrac><mrow><mo>|</mo><mi>a</mi><mo>|</mo><msup><mrow><mo>(</mo><mi>β</mi><mo>−</mo><mi>α</mi><mo>)</mo></mrow><mn>3</mn></msup></mrow><mn>6</mn></mfrac>
+      </math>
+      <p>분모의 6은 ½ − ⅓에서 나왔어요. 이차항의 계수가 같을 때 가로 간격이 두 배가 되면 대응하는 위치에서 두 거리도 각각 두 배가 되어 높이는 네 배가 되고, 적분하는 폭까지 두 배가 되어 넓이는 여덟 배가 됩니다. 공식의 세제곱은 이 그림만으로도 기억할 수 있어요.</p>
+      <p class="reason-return"><a href="/concept-reasons">← 개념의 이유 목록</a></p>
+    </article>
+  </main>
+</body>
+</html>

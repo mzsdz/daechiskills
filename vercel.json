@@ -66,15 +66,21 @@
     }
   ],
   "rewrites": [
-    {"source": "/locker", "destination": "/index.html"},
-    {"source": "/n/:slug", "destination": "/index.html"},
     {
-      "source": "/concept-dictionary/definitions",
-      "destination": "/dictionary-definitions.html"
+      "source": "/locker",
+      "destination": "/index.html"
     },
     {
-      "source": "/concept-dictionary/theorems",
-      "destination": "/dictionary-theorems.html"
+      "source": "/n/:slug",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/concept-reasons",
+      "destination": "/concept-reasons.html"
+    },
+    {
+      "source": "/concept-reasons/sixth-area",
+      "destination": "/concept-reason-sixth-area.html"
     },
     {
       "source": "/skills/lhopital",
@@ -169,5 +175,27 @@
       "destination": "/api/public-content?view=sitemap"
     }
   ],
-  "installCommand": ""
+  "installCommand": "",
+  "redirects": [
+    {
+      "source": "/concept-dictionary/definitions",
+      "destination": "/concept-reasons",
+      "permanent": false
+    },
+    {
+      "source": "/dictionary-definitions.html",
+      "destination": "/concept-reasons",
+      "permanent": false
+    },
+    {
+      "source": "/concept-dictionary/theorems",
+      "destination": "/concept-reasons",
+      "permanent": false
+    },
+    {
+      "source": "/dictionary-theorems.html",
+      "destination": "/concept-reasons",
+      "permanent": false
+    }
+  ]
 }
