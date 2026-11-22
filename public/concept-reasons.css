@@ -9,7 +9,7 @@
 .reason-return a { color: var(--editorial-accent); }
 .reason-article h1 { margin: 0; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.24; letter-spacing: -.045em; text-wrap: balance; }
 .reason-intro { margin: 1.1rem 0 2rem; font-size: 1.1rem; color: #414857; }
-.reason-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1.6rem; }
+.reason-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .reason-card { border: 1px solid var(--editorial-line); border-radius: .875rem; background: var(--editorial-surface); }
 .reason-card a { display: block; height: 100%; border-radius: inherit; }
 .reason-card a:focus-visible { outline: 2px solid #164b73; outline-offset: 3px; }

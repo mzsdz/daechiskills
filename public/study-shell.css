@@ -46,6 +46,30 @@
 .editorial-header .slash { color: var(--editorial-accent); }
 .editorial-shell { min-height: 70dvh; padding-block: 22px 30px; }
 .editorial-shell :is(.sectionhead, .editorial-locker) h1, .editorial-shell > h1 { font-size: clamp(1.65rem, 5vw, 2.25rem); line-height: 1.2; letter-spacing: -.05em; margin: 0; }
+.study-page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 18px;
+}
+.study-page-heading__copy { min-width: 0; }
+.study-page-heading__label {
+  margin: 0 0 4px;
+  color: var(--editorial-muted);
+  font-size: .6875rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: .14em;
+}
+.editorial-shell .study-page-heading h1 {
+  margin: 0;
+  font-size: clamp(1.65rem, 5vw, 2.25rem);
+  line-height: 1.2;
+  letter-spacing: -.05em;
+}
+.study-page-heading__description { margin: 8px 0 0; color: var(--editorial-muted); line-height: 1.7; }
+.study-page-heading > .btn { flex: none; }
 .study-navigation { gap: 4px; }
 .study-navigation > a {
   min-height: 44px;
