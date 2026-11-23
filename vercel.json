@@ -67,6 +67,10 @@
   ],
   "rewrites": [
     {
+      "source": "/exam-downloads",
+      "destination": "/exam-downloads.html"
+    },
+    {
       "source": "/locker",
       "destination": "/index.html"
     },
