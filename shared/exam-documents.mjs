@@ -14,3 +14,19 @@ export function examDocumentId(url) {
   }
   return null;
 }
+
+export const combinedCsatPapers = new Map([
+  ['4dee411efbfef1ab1b44fde9dc8f9378', {year:2022, oddPages:20}],
+  ['23bed50b6f952ec50a0e40f376fdb358', {year:2023, oddPages:20}],
+]);
+
+export const latestCsatOddPaper = examDayDocuments.get('b5787b27c7bd5232a5e263ed3564303d');
+
+export function csatOddPaperUrl(url,page=1) {
+  const id=examDocumentId(url);
+  if(id==='f9055b3484e9176cea7c74b9819a7d2c'&&page<=20)
+    return 'https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_math_9Q5HR738.pdf';
+  const combined=combinedCsatPapers.get(id);
+  if(combined&&page<=combined.oddPages)return `/api/exam-document?file=${id}&form=odd`;
+  return url;
+}
