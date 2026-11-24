@@ -1247,6 +1247,46 @@ export const legacyExamDocuments = new Map([
   [
     "7debd870e16d6b26dfe9eac8deb75dac",
     "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=7debd870e16d6b26dfe9eac8deb75dac"
+  ],
+  [
+    "fffe2bc34c192e2ecd7fc4c4b4d12c47",
+    "https://wdown.ebsi.co.kr/W61001/01exam/20081113/mathna1_mun.pdf"
+  ],
+  [
+    "412c2f3ce1f1bbeabbcdaa413da9b910",
+    "https://wdown.ebsi.co.kr/W61001/01exam/20081113/mathga1_mun.pdf"
+  ],
+  [
+    "decd716a2b6e0441082bf36990ac7031",
+    "https://wdown.ebsi.co.kr/W61001/01exam/20081113/mathga2_mun.pdf"
+  ],
+  [
+    "a8f35e8a94c3999b5f8d037964a35325",
+    "https://wdown.ebsi.co.kr/W61001/01exam/20081113/mathna2_mun.pdf"
+  ],
+  [
+    "af2448ceb9e7b9979b2ceb91041c15ba",
+    "https://wdown.ebsi.co.kr/W61001/01exam/20071115/mathna1_mun.pdf"
+  ],
+  [
+    "de9c4d7ae3da864500a7d055f86ee614",
+    "https://wdown.ebsi.co.kr/W61001/01exam/20071115/mathna2_mun.pdf"
+  ],
+  [
+    "7fbdf687a114690341881439fa102fa6",
+    "https://wdown.ebsi.co.kr/W61001/01exam/20071115/mathga1_mun.pdf"
+  ],
+  [
+    "6f299cc43fb3a6cd479da8296224dbaf",
+    "https://wdown.ebsi.co.kr/W61001/01exam/20071115/mathga2_mun.pdf"
+  ],
+  [
+    "3661499243b83b937374a2ba246268c0",
+    "https://wdown.ebsi.co.kr/W61001/01exam/20061116/mathga1_mun.pdf"
+  ],
+  [
+    "ccd4582fb5ddc15142a21a6896d7a4ea",
+    "https://wdown.ebsi.co.kr/W61001/01exam/20061116/mathna1_mun.pdf"
   ]
 ]);
 export const legacyArchiveUrls = new Set([
