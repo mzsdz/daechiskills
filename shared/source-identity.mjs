@@ -1,6 +1,6 @@
 const clean=v=>typeof v==='string'?v.replace(/\s+/g,' ').trim():'';
 const num=(v,min=1,max=9999)=>Number.isInteger(Number(v))&&Number(v)>=min&&Number(v)<=max?Number(v):null;
-const sections={common:'공통',probability:'확률과 통계',calculus:'미적분',geometry:'기하',math:''};
+const sections={common:'공통',probability:'확률과 통계',calculus:'미적분',geometry:'기하','math-a':'가형','math-b':'나형',math:''};
 const aliases={'공통수학1':'공수1','공통수학2':'공수2','수학Ⅰ':'수1','수학Ⅱ':'수2','확률과 통계':'확통','미적분':'미적','기하':'기하'};
 export function normalizeIdentity(value={}){
  const i={};for(const key of ['kind','school','grade','subject','book','course','edition','provider','section'])if(clean(value[key]))i[key]=clean(value[key]).slice(0,100);
@@ -12,7 +12,7 @@ export function inferSourceIdentity(problem={},override){
  const explicit=normalizeIdentity(override?.kind?override:details.identity||{});if(explicit.kind)return explicit;
  const text=[clean(problem.title),clean(problem.sourceLabel||details.label)].join(' '),source=problem.source||'',number=num(c.question_no)||num(text.match(/(?:^|\s)(\d{1,4})\s*번/)?.[1]),year=num(c.calendar_year,2000,2100)||num(text.match(/(20\d{2})\s*년(?!도)/)?.[1],2000,2100);
  const provider=/수능/.test(text)||source==='수능'?'수능':/평가원/.test(text)||source==='평가원'?'평가원':/교육청/.test(text)||source==='교육청'?'교육청':'';
- if(provider&&year&&number){const month=provider==='수능'?11:num(c.month,1,12)||num(text.match(/(\d{1,2})\s*월/)?.[1],1,12);if(month)return normalizeIdentity({kind:'exam',provider,year,month,number,grade:problem.grade||c.grade||(problem.examQuestionId||problem.exam_question_id?'고3':''),section:c.section||Object.keys(sections).find(k=>sections[k]&&text.includes(sections[k])),subject:'수학'});}
+ if(provider&&year&&number){const month=num(c.month,1,12)||(provider==='수능'?11:num(text.match(/(\d{1,2})\s*월/)?.[1],1,12));if(month)return normalizeIdentity({kind:'exam',provider,year,month,number,grade:problem.grade||c.grade||(problem.examQuestionId||problem.exam_question_id?'고3':''),section:c.section||Object.keys(sections).find(k=>sections[k]&&text.includes(sections[k])),subject:'수학'});}
  if(source==='내신'||/학기\s*(?:중간|기말)/.test(text)){
  const school=clean(text.match(/([가-힣A-Za-z0-9]+(?:고등학교|중학교|고|중))(?=\s|$)/)?.[1]),grade=problem.grade||text.match(/([중고][123])/)?.[1]||text.match(/([123])학년/)?.[1],semester=num(text.match(/([12])\s*학기/)?.[1],1,2),phase=/기말/.test(text)?2:/중간/.test(text)?1:null;
  return normalizeIdentity({kind:'school',school,year,grade,semester,exam:semester&&phase?(semester-1)*2+phase:null,subject:problem.subject||'수학',number});

@@ -1,12 +1,12 @@
 const problemFields='id,exam_question_id,calendar_year:source_details->classification->>calendar_year,month:source_details->classification->>month,section:source_details->classification->>section,question_no:source_details->classification->>question_no,variant:source_details->classification->>variant';
 const cacheHeaders={'Content-Type':'application/json; charset=utf-8','X-Content-Type-Options':'nosniff','Cache-Control':'public, max-age=0, s-maxage=60, stale-while-revalidate=300'};
 
-// Matches examQuestionGroup: only complete November odd/even identities collapse.
+// Matches examQuestionGroup for official CSAT papers, including December 2020.
 function examKey(problem){
- if(problem.exam_question_id&&['odd','even'].includes(problem.variant)&&Number(problem.month)===11
+ if(problem.exam_question_id&&['odd','even'].includes(problem.variant)&&[11,12].includes(Number(problem.month))
   &&Number.isInteger(Number(problem.calendar_year))&&Number(problem.calendar_year)>0
   &&Number.isInteger(Number(problem.question_no))&&Number(problem.question_no)>0&&problem.section){
-  return JSON.stringify([Number(problem.calendar_year),11,problem.section,Number(problem.question_no)]);
+  return JSON.stringify([Number(problem.calendar_year),Number(problem.month),problem.section,Number(problem.question_no)]);
  }
  return 'problem:'+problem.id;
 }
