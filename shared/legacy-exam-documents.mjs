@@ -1,4 +1,4 @@
-// Verified KICE and EBSi source files used by the 2001–2019 examination catalog.
+// Verified KICE and EBSi source files used by the 1993–2019 examination catalog.
 export const legacyExamDocuments = new Map([
   [
     "754ce3029248c5cbc5fea3ee981ff944",
@@ -1287,6 +1287,82 @@ export const legacyExamDocuments = new Map([
   [
     "ccd4582fb5ddc15142a21a6896d7a4ea",
     "https://wdown.ebsi.co.kr/W61001/01exam/20061116/mathna1_mun.pdf"
+  ],
+  [
+    "029513248b6d765cc671e9096af0a907",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=029513248b6d765cc671e9096af0a907"
+  ],
+  [
+    "f34dcaba61fcea95c90416391f94d505",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=f34dcaba61fcea95c90416391f94d505"
+  ],
+  [
+    "7cfd4cd8b9532f7ce5a90d2c9807c6e5",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=7cfd4cd8b9532f7ce5a90d2c9807c6e5"
+  ],
+  [
+    "a1a44b862ec6ead8a36f8953a5c61ede",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=a1a44b862ec6ead8a36f8953a5c61ede"
+  ],
+  [
+    "a36ffbb67f08b0f95d564f82d8b16bed",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=a36ffbb67f08b0f95d564f82d8b16bed"
+  ],
+  [
+    "2815653f3af73a14db93b7033fa4dd0d",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=2815653f3af73a14db93b7033fa4dd0d"
+  ],
+  [
+    "44663a0dd773fc5bb69d8dec2a088df4",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=44663a0dd773fc5bb69d8dec2a088df4"
+  ],
+  [
+    "b5ab0db63db52b609f023ba9cec58bc0",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=b5ab0db63db52b609f023ba9cec58bc0"
+  ],
+  [
+    "3caf5941e17b3bf93b975f74f97d2908",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=3caf5941e17b3bf93b975f74f97d2908"
+  ],
+  [
+    "e64067bb277b29348b4f782f1401b01f",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=e64067bb277b29348b4f782f1401b01f"
+  ],
+  [
+    "68efcf563fa6e5a9a361154b22e1c6b2",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=68efcf563fa6e5a9a361154b22e1c6b2"
+  ],
+  [
+    "faeef3f0c86f10110575dc452e728ac3",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=faeef3f0c86f10110575dc452e728ac3"
+  ],
+  [
+    "1aedf3b2e7f788ce9219e1210c5b5a06",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=1aedf3b2e7f788ce9219e1210c5b5a06"
+  ],
+  [
+    "543ff4f353089907e49e4898f0647153",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=543ff4f353089907e49e4898f0647153"
+  ],
+  [
+    "c5c0845a723dca9090e7cbc6dcde8f40",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=c5c0845a723dca9090e7cbc6dcde8f40"
+  ],
+  [
+    "9c2e417bd2e225bd87509c7a84683830",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=9c2e417bd2e225bd87509c7a84683830"
+  ],
+  [
+    "202c457beca10692f79a791ea4df1340",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=202c457beca10692f79a791ea4df1340"
+  ],
+  [
+    "69f1a3247d4b524fa19646bd2276906a",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=69f1a3247d4b524fa19646bd2276906a"
+  ],
+  [
+    "5df6aa7c16fc6bd1c8e5b72c8457686d",
+    "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=5df6aa7c16fc6bd1c8e5b72c8457686d"
   ]
 ]);
 export const legacyArchiveUrls = new Set([
@@ -1294,4 +1370,25 @@ export const legacyArchiveUrls = new Set([
   "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=55fa326d7de2cd94a74df87065f12714",
   "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=b610600ab23a5f4243be177b73bc52c4",
   "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=05fe77daeec8609ed86b2b7a8159a2f2"
+]);
+export const earlyCsatScans = new Set([
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=029513248b6d765cc671e9096af0a907",
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=f34dcaba61fcea95c90416391f94d505",
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=7cfd4cd8b9532f7ce5a90d2c9807c6e5",
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=a1a44b862ec6ead8a36f8953a5c61ede",
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=a36ffbb67f08b0f95d564f82d8b16bed",
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=2815653f3af73a14db93b7033fa4dd0d",
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=44663a0dd773fc5bb69d8dec2a088df4",
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=b5ab0db63db52b609f023ba9cec58bc0",
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=3caf5941e17b3bf93b975f74f97d2908",
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=e64067bb277b29348b4f782f1401b01f",
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=68efcf563fa6e5a9a361154b22e1c6b2",
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=faeef3f0c86f10110575dc452e728ac3",
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=1aedf3b2e7f788ce9219e1210c5b5a06",
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=543ff4f353089907e49e4898f0647153",
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=c5c0845a723dca9090e7cbc6dcde8f40",
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=9c2e417bd2e225bd87509c7a84683830",
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=202c457beca10692f79a791ea4df1340",
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=69f1a3247d4b524fa19646bd2276906a",
+  "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=5df6aa7c16fc6bd1c8e5b72c8457686d"
 ]);

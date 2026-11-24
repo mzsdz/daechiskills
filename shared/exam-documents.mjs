@@ -1,5 +1,5 @@
 import {historicalExamDocuments} from './historical-exam-documents.mjs';
-import {legacyArchiveUrls,legacyExamDocuments} from './legacy-exam-documents.mjs';
+import {earlyCsatScans,legacyArchiveUrls,legacyExamDocuments} from './legacy-exam-documents.mjs';
 
 // In the archive, KICE assigns a fileSeq. For the exam-day PDFs, use the
 // first 128 bits of the verified file's SHA-256 as the internal document ID.
@@ -10,6 +10,7 @@ export const examDayDocuments = new Map([
 
 export const hostedExamDocuments = new Map([...examDayDocuments, ...historicalExamDocuments, ...legacyExamDocuments]);
 const hostedExamIds = new Map([...hostedExamDocuments].map(([id,url])=>[url,id]));
+export const requiresNativeExamImage = url => earlyCsatScans.has(url) || legacyArchiveUrls.has(url);
 export const isLegacyArchive = url => legacyArchiveUrls.has(url);
 
 export function examDocumentId(url) {
