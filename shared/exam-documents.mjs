@@ -1,4 +1,5 @@
 import {historicalExamDocuments} from './historical-exam-documents.mjs';
+import {legacyArchiveUrls,legacyExamDocuments} from './legacy-exam-documents.mjs';
 
 // In the archive, KICE assigns a fileSeq. For the exam-day PDFs, use the
 // first 128 bits of the verified file's SHA-256 as the internal document ID.
@@ -7,8 +8,9 @@ export const examDayDocuments = new Map([
   ['fcc79b1fe0eb155d86f9e38785ea3ad2', 'https://wdown.ebsi.co.kr/W61001/01exam/20261119/go3/live_main_paper_2_math_F51864J3.pdf'],
 ]);
 
-export const hostedExamDocuments = new Map([...examDayDocuments, ...historicalExamDocuments]);
+export const hostedExamDocuments = new Map([...examDayDocuments, ...historicalExamDocuments, ...legacyExamDocuments]);
 const hostedExamIds = new Map([...hostedExamDocuments].map(([id,url])=>[url,id]));
+export const isLegacyArchive = url => legacyArchiveUrls.has(url);
 
 export function examDocumentId(url) {
   if (typeof url !== 'string') return null;

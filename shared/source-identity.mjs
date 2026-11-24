@@ -1,6 +1,6 @@
 const clean=v=>typeof v==='string'?v.replace(/\s+/g,' ').trim():'';
 const num=(v,min=1,max=9999)=>Number.isInteger(Number(v))&&Number(v)>=min&&Number(v)<=max?Number(v):null;
-const sections={common:'공통',probability:'확률과 통계',calculus:'미적분',geometry:'기하','math-a':'가형','math-b':'나형',math:''};
+const sections={common:'공통',probability:'확률과 통계',calculus:'미적분',geometry:'기하','math-a':'가형','math-b':'나형','type-a':'A형','type-b':'B형',humanities:'인문계',natural:'자연계',arts:'예체능계','math-a-integral':'가형 미분과 적분','math-a-probability':'가형 확률과 통계','math-a-discrete':'가형 이산수학',math:''};
 const aliases={'공통수학1':'공수1','공통수학2':'공수2','수학Ⅰ':'수1','수학Ⅱ':'수2','확률과 통계':'확통','미적분':'미적','기하':'기하'};
 export function normalizeIdentity(value={}){
  const i={};for(const key of ['kind','school','grade','subject','book','course','edition','provider','section'])if(clean(value[key]))i[key]=clean(value[key]).slice(0,100);
