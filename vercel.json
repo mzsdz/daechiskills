@@ -24,7 +24,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://*.supabase.co wss://*.supabase.co; object-src 'none'; frame-src https://www.suneung.re.kr; worker-src 'self'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'"
+          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.google-analytics.com; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://*.google-analytics.com; object-src 'none'; frame-src https://www.suneung.re.kr; worker-src 'self'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'"
         }
       ]
     },

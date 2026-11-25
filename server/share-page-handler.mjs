@@ -18,7 +18,7 @@ export function createSharePageHandler({shell,fetcher=fetch,backendUrl='https://
   const values={'description':description,'og:title':title,'og:description':description,'og:url':url,'twitter:title':title,'twitter:description':description};
   html=html.replace(/<meta (name|property)="([^"]+)" content="[^"]*"\s*\/>/g,(tag,attr,key)=>key in values?`<meta ${attr}="${key}" content="${esc(values[key])}" />`:tag);
   html=html.replace(/<link rel="canonical" href="[^"]*"\s*\/>/,()=>'<link rel="canonical" href="'+esc(url)+'" />');
-  html=html.replace('</head>','<meta name="robots" content="noindex,nofollow,noarchive" /><meta name="referrer" content="no-referrer" /></head>');
+  html=html.replace('</head>','<meta name="robots" content="noindex,nofollow,noarchive" /><meta name="referrer" content="no-referrer" /><script defer src="/ga4.js"></script></head>');
   return new Response(html,{status,headers});
  };
 }
