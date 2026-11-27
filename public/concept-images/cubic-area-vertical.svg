@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 160" role="img" aria-labelledby="cubic-graph-3 cubic-graph-desc-3">
+  <style>
+    .reason-fill { fill: #d8e9f4; }
+    .reason-curve { fill: none; stroke: #263b54; stroke-width: 2.4; }
+    .reason-guide { fill: none; stroke: #657285; stroke-width: 1.5; }
+    .reason-height { stroke: #a14432; stroke-width: 3; }
+    .reason-dot { fill: #263b54; }
+    .reason-fill-alt { fill: #f3dbc7; }
+    .reason-axis { stroke: #657285; stroke-width: 1.1; }
+    .reason-diagram-label { fill: #263b54; font: italic 17px serif; }
+  </style>
+          <title id="cubic-graph-3">삼중근에서 수직선까지</title>
+          <desc id="cubic-graph-desc-3">α에서 평평하게 축을 통과합니다. β에서는 수직선이 곡선과 축 사이를 닫습니다.</desc>
+          <path d="M70.8 91.11 C134.41 91.11 198.03 91.11 261.64 26.53 L261.64 91.11 H70.8 Z" class="reason-fill"/>
+          <path d="M13 91.11 H288" class="reason-axis"/>
+          <path d="M25 92 C108.33 87.13 191.67 108.85 275 12" class="reason-curve"/>
+          <path d="M261.64 91.11 V26.53" class="reason-height"/><circle cx="70.8" cy="91.11" r="3.25" class="reason-dot"/><path d="M70.8 96.11 V103" class="reason-guide"/><path d="M261.64 96.11 V103" class="reason-guide"/>
+          <g class="reason-diagram-label" text-anchor="middle"><text x="70.8" y="118">α</text><text x="261.64" y="118">β</text><path d="M70.8 128v8 M261.64 128v8 M70.8 132H261.64" class="reason-guide"/><text x="166.22" y="151">d</text></g>
+        </svg>

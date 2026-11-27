@@ -8,7 +8,12 @@ const units = Array.from(document.querySelectorAll('.formula-unit'), (unit) => {
   const title = unit.querySelector('h2').textContent;
   const entries = Array.from(unit.querySelectorAll('.formula-entry'), (entry) => ({
     entry,
-    terms: [title, entry.querySelector('summary').textContent, ...entry.dataset.keywords.split(',')].map(normalize),
+    terms: [
+      title,
+      entry.querySelector('summary').textContent,
+      ...Array.from(entry.querySelectorAll('.formula-case h3'), (heading) => heading.textContent),
+      ...entry.dataset.keywords.split(','),
+    ].map(normalize),
   }));
   return { unit, entries, count: unit.querySelector('.formula-unit-count') };
 });

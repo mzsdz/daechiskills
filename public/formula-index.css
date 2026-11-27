@@ -30,6 +30,16 @@
 .formula-equation math { font-size: 25px; }
 .formula-entry-content p { margin: 10px 0 2px; color: var(--editorial-muted); font-size: 13px; word-break: keep-all; }
 .formula-entry-content p strong { display: block; color: var(--editorial-ink); }
-.formula-entry-content a { display: inline-flex; align-items: center; gap: 5px; min-height: 44px; color: var(--editorial-accent); font-size: 13px; font-weight: 800; text-underline-offset: .2em; }
+.formula-entry-content .formula-cases-intro { margin: 0 0 12px; }
+.formula-cases { display: grid; gap: 12px; }
+.formula-case { min-width: 0; padding: 12px; border: 1px solid var(--editorial-line); border-radius: 8px; background: var(--editorial-surface); }
+.formula-case h3 { margin: 0 0 8px; font-size: 14px; }
+.formula-case img { display: block; width: 100%; max-width: 240px; height: auto; margin: 0 auto 8px; }
+.formula-case p { margin: 8px 0 0; }
+.formula-case .formula-equation { min-height: 62px; gap: 6px; }
+.formula-case math { font-size: clamp(17px, 5.5vw, 21px); }
+@media (min-width: 601px) { .formula-cases { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.formula-entry-content a, .formula-area-library { display: inline-flex; align-items: center; gap: 5px; min-height: 44px; color: var(--editorial-accent); font-size: 13px; font-weight: 800; text-underline-offset: .2em; }
+.formula-area-library { margin-top: 9px; }
 .formula-search-status { margin: 15px 0 0; color: var(--editorial-muted); }
 .formula-search-status[data-has-results], .formula-search-status:empty { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); }

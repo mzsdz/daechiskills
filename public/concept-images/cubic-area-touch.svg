@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 160" role="img" aria-labelledby="cubic-graph-0 cubic-graph-desc-0">
+  <style>
+    .reason-fill { fill: #d8e9f4; }
+    .reason-curve { fill: none; stroke: #263b54; stroke-width: 2.4; }
+    .reason-guide { fill: none; stroke: #657285; stroke-width: 1.5; }
+    .reason-height { stroke: #a14432; stroke-width: 3; }
+    .reason-dot { fill: #263b54; }
+    .reason-fill-alt { fill: #f3dbc7; }
+    .reason-axis { stroke: #657285; stroke-width: 1.1; }
+    .reason-diagram-label { fill: #263b54; font: italic 17px serif; }
+  </style>
+          <title id="cubic-graph-0">접점과 교점 사이</title>
+          <desc id="cubic-graph-desc-0">왼쪽 α에서 접하고 오른쪽 β에서 통과합니다. 두 근 사이 한 조각을 칠했습니다.</desc>
+          <path d="M56.25 52.32 C121.35 52.32 186.46 141.6 251.56 52.32 L251.56 52.32 H56.25 Z" class="reason-fill"/>
+          <path d="M13 52.32 H288" class="reason-axis"/>
+          <path d="M25 60.27 C108.33 14.93 191.67 186.08 275 12" class="reason-curve"/>
+          <circle cx="56.25" cy="52.32" r="3.25" class="reason-dot"/><circle cx="251.56" cy="52.32" r="3.25" class="reason-dot"/><path d="M56.25 57.32 V103" class="reason-guide"/><path d="M251.56 57.32 V103" class="reason-guide"/>
+          <g class="reason-diagram-label" text-anchor="middle"><text x="56.25" y="118">α</text><text x="251.56" y="118">β</text><path d="M56.25 128v8 M251.56 128v8 M56.25 132H251.56" class="reason-guide"/><text x="153.91" y="151">d</text></g>
+        </svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 160" role="img" aria-labelledby="cubic-graph-1 cubic-graph-desc-1">
+  <style>
+    .reason-fill { fill: #d8e9f4; }
+    .reason-curve { fill: none; stroke: #263b54; stroke-width: 2.4; }
+    .reason-guide { fill: none; stroke: #657285; stroke-width: 1.5; }
+    .reason-height { stroke: #a14432; stroke-width: 3; }
+    .reason-dot { fill: #263b54; }
+    .reason-fill-alt { fill: #f3dbc7; }
+    .reason-axis { stroke: #657285; stroke-width: 1.1; }
+    .reason-diagram-label { fill: #263b54; font: italic 17px serif; }
+  </style>
+          <title id="cubic-graph-1">세 교점 사이</title>
+          <desc id="cubic-graph-desc-1">왼쪽부터 α, β, γ에서 축을 통과합니다. α와 β 사이를 파란색, β와 γ 사이를 주황색으로 칠했습니다.</desc>
+          <path d="M34.8 41.82 C67.48 -7.81 100.16 13.31 132.84 41.82 L132.84 41.82 H34.8 Z" class="reason-fill"/><path d="M132.84 41.82 C176.96 80.31 221.08 132.27 265.2 41.82 L265.2 41.82 H132.84 Z" class="reason-fill-alt"/>
+          <path d="M13 41.82 H288" class="reason-axis"/>
+          <path d="M25 58.9 C108.33 -105.36 191.67 231.63 275 19.31" class="reason-curve"/>
+          <circle cx="34.8" cy="41.82" r="3.25" class="reason-dot"/><circle cx="132.84" cy="41.82" r="3.25" class="reason-dot"/><circle cx="265.2" cy="41.82" r="3.25" class="reason-dot"/><path d="M34.8 46.82 V103" class="reason-guide"/><path d="M132.84 46.82 V103" class="reason-guide"/><path d="M265.2 46.82 V103" class="reason-guide"/>
+          <g class="reason-diagram-label" text-anchor="middle"><text x="34.8" y="118">α</text><text x="132.84" y="118">β</text><text x="265.2" y="118">γ</text><path d="M34.8 128v8 M132.84 128v8 M34.8 132H132.84" class="reason-guide"/><text x="83.82" y="151">p</text><path d="M132.84 128v8 M265.2 128v8 M132.84 132H265.2" class="reason-guide"/><text x="199.02" y="151">q</text></g>
+        </svg>
