@@ -11,3 +11,61 @@
 .area-math .katex-display{margin:.5em 0}
 
 .review-problem-meta{display:grid;gap:8px;margin-bottom:14px}.review-problem-meta p{font-size:13px}.review-problem-meta a{text-underline-offset:3px}.review-difficulty-links{display:flex;flex-wrap:wrap;gap:7px}.review-difficulty-links a{min-height:36px;display:inline-flex;align-items:center;text-decoration:none}.review-difficulty-links .selected{background:#f2a1c6;border-color:#b95884;color:#151713}.quartic-problem figcaption.optimized-origin-links{margin-top:12px}
+
+.area-static:has(.area-guide) { background: #f6f4ed; color: #1e2927; font: 15px/1.7 system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+.area-guide-feature { display: block; width: 100%; height: auto; border-radius: 8px; }
+.area-static:has(.area-guide) .area-static-header { padding-block: 14px; background: #fffefa; border-color: #dedfd5; }
+.area-static:has(.area-guide) .area-static-header .shell { display: flex; justify-content: space-between; align-items: center; gap: 8px; width: calc(100% - 32px); max-width: 832px; }
+.area-static:has(.area-guide) .area-static-header a:last-child { color: #205b50; font-size: 13px; }
+.area-static:has(.area-guide) > .page-back { position: static; margin-inline: max(16px, calc((100% - 832px) / 2)); }
+.area-static:has(.area-guide) { padding-bottom: max(18px, env(safe-area-inset-bottom)); }
+.area-guide { --guide-ink: #1e2927; --guide-muted: #56615a; --guide-line: #dedfd5; --guide-surface: #fffefa; --guide-accent: #205b50; --guide-tint: #e5efe9; max-width: 832px; margin-inline: auto; padding: 28px 0 36px; color: var(--guide-ink); }
+.area-static .area-guide { width: calc(100% - 32px); }
+.area-guide [hidden] { display: none !important; }
+.area-guide a { color: var(--guide-accent); text-underline-offset: 3px; }
+.area-guide :is(a, summary):focus-visible { outline: 2px solid var(--guide-accent); outline-offset: 3px; }
+.area-guide-heading h1 { margin: 0; font-size: clamp(28px, 5vw, 42px); line-height: 1.2; letter-spacing: -.055em; }
+.area-guide-heading > p { margin: 0 0 4px; color: var(--guide-muted); font-size: 11px; font-weight: 800; letter-spacing: .14em; }
+.area-guide-lead { max-width: 630px; margin: 14px 0 22px; color: var(--guide-muted); font-size: 15px; word-break: keep-all; }
+.area-guide-lead p, .area-guide-instruction { margin: 0; }
+.area-guide h2 { margin: 0 0 10px; font-size: 20px; letter-spacing: -.04em; }
+.area-guide-picker { scroll-margin-top: 20px; }
+.area-guide-filters div { display: flex; flex-wrap: wrap; gap: 6px; }
+.area-guide-filters a { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding-inline: 13px; border: 1px solid var(--guide-line); border-radius: 7px; background: var(--guide-surface); color: var(--guide-muted); text-decoration: none; font-size: 13px; font-weight: 700; }
+.area-guide-filters a[aria-current] { border-color: var(--guide-accent); background: var(--guide-tint); color: var(--guide-accent); }
+.area-guide-filters details { margin-top: 6px; }
+.area-guide-filters summary { padding-block: 6px; cursor: pointer; color: var(--guide-muted); font-size: 13px; }
+.area-guide .area-result { margin: 9px 0 7px; color: var(--guide-muted); font-size: 12px; }
+.area-thumbnails { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.area-guide a.area-thumb { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid var(--guide-line); border-radius: 8px; background: var(--guide-surface); color: var(--guide-ink); text-decoration: none; }
+.area-guide-graph { display: block; width: 100%; height: auto; }
+.area-thumb > span { padding: 6px 8px 8px; }
+.area-thumb small { display: block; color: var(--guide-muted); font-size: 11px; line-height: 1.3; }
+.area-thumb strong { display: block; margin-top: 2px; font-size: 13px; line-height: 1.4; word-break: keep-all; }
+.area-guide a.area-thumb:hover { border-color: var(--guide-accent); }
+.area-thumb:hover strong { text-decoration: underline; }
+.area-empty, .area-guide-instruction { color: var(--guide-muted); font-size: 14px; word-break: keep-all; }
+.area-guide-contents { margin-top: 30px; }
+.area-guide-details { display: grid; gap: 14px; margin-top: 14px; }
+.area-guide .area-card { scroll-margin-top: 16px; padding: 14px; border-color: var(--guide-line); border-radius: 10px; background: var(--guide-surface); }
+.area-guide .area-card:target { border-color: var(--guide-accent); }
+.area-guide-type { color: var(--guide-accent); font-size: 12px; font-weight: 750; }
+.area-guide .area-card h3 { margin: 2px 0; font-size: 19px; letter-spacing: -.04em; word-break: keep-all; }
+.area-guide .area-card > p { min-height: 0; margin: 4px 0 12px; color: var(--guide-muted); word-break: keep-all; }
+.area-card-figure { display: grid; gap: 9px; align-items: center; }
+.area-card-figure > img { max-width: 360px; margin-inline: auto; border-radius: 6px; }
+.area-guide .area-formulas { min-width: 0; margin: 0; padding: 5px 9px; border-radius: 6px; background: var(--guide-tint); }
+.area-guide .area-math { display: block; box-sizing: border-box; color: var(--guide-ink); }
+.area-card-condition { padding-block: 12px; }
+.area-card-condition h4, .area-card-condition p { margin: 0; }
+.area-card-condition p { color: var(--guide-muted); font-size: 14px; word-break: keep-all; }
+.area-guide .area-card details { padding: 9px 0; }
+.area-guide .area-card details details { margin-top: 6px; }
+.area-return { display: inline-flex; align-items: center; min-height: 38px; font-size: 13px; font-weight: 700; }
+.area-guide-sources { margin-top: 26px; padding-top: 14px; border-top: 1px solid var(--guide-line); font-size: 13px; }
+.area-guide-sources p { margin: 5px 0; }
+@media (min-width: 640px) {
+  .area-thumbnails { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+  .area-card-figure { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
+  .area-guide .area-card { padding: 18px; }
+}

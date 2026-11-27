@@ -1,3 +1,39 @@
-const apply=()=>{const q=new URLSearchParams(location.search),degree=q.get('degree'),shape=q.get('shape');let count=0;for(const card of document.querySelectorAll('.area-card')){card.hidden=Boolean(degree&&card.dataset.degree!==degree||shape&&card.dataset.shape!==shape);if(!card.hidden)count++;}document.querySelector('.area-result').textContent=`${count}개 모양`;for(const link of document.querySelectorAll('.area-filters a')){const p=new URL(link.href).searchParams,group=link.parentElement===document.querySelector('.area-filters>div')?'degree':'shape';const selected=(p.get(group)||'')===(q.get(group)||'');link.classList.toggle('selected',selected);if(selected)link.setAttribute('aria-current','true');else link.removeAttribute('aria-current');}};
-document.querySelector('.area-filters').addEventListener('click',e=>{const a=e.target.closest('a');if(!a||e.ctrlKey||e.metaKey)return;e.preventDefault();const next=new URL(a.href),current=new URL(location.href);const group=a.parentElement===document.querySelector('.area-filters>div')?'degree':'shape';const value=next.searchParams.get(group);value?current.searchParams.set(group,value):current.searchParams.delete(group);history.pushState(null,'',current);apply();});
-addEventListener('popstate',apply);apply();
+const filterNav = document.querySelector('.area-guide-filters');
+const filterLinks = [...filterNav.querySelectorAll('[data-area-filter]')];
+const thumbs = [...document.querySelectorAll('.area-thumb')];
+const cards = [...document.querySelectorAll('.area-guide .area-card')];
+
+function applyFilters() {
+  const url = new URL(location.href);
+  const degree = url.searchParams.get('degree') || '';
+  const shape = url.searchParams.get('shape') || '';
+  const visible = (item) => (!degree || item.dataset.degree === degree) && (!shape || item.dataset.shape === shape);
+  for (const item of [...thumbs, ...cards]) item.hidden = !visible(item);
+  const count = thumbs.filter(visible).length;
+  document.querySelector('.area-result').textContent = `${count}가지 모양`;
+  document.querySelector('.area-empty').hidden = count > 0;
+  document.querySelector('.area-guide-contents').hidden = count === 0;
+  if (shape) filterNav.querySelector('details').open = true;
+
+  for (const link of filterLinks) {
+    const { areaFilter, value } = link.dataset;
+    const selected = (url.searchParams.get(areaFilter) || '') === value;
+    if (selected) link.setAttribute('aria-current', 'true');
+    else link.removeAttribute('aria-current');
+    const next = new URL(url);
+    next.hash = '';
+    if (value) next.searchParams.set(areaFilter, value);
+    else next.searchParams.delete(areaFilter);
+    link.href = next.pathname + next.search;
+  }
+}
+
+filterNav.addEventListener('click', (event) => {
+  const link = event.target.closest('[data-area-filter]');
+  if (!link || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  if (link.href !== location.href) history.pushState(null, '', link.href);
+  applyFilters();
+});
+addEventListener('popstate', applyFilters);
+applyFilters();
