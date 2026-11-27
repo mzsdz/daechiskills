@@ -1,0 +1,24 @@
+.study-article-heading {
+  font-family: system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+.study-article-heading > .study-article-heading__label {
+  margin: 0 0 4px;
+  color: var(--editorial-muted, #56615a);
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.7;
+  letter-spacing: .14em;
+}
+
+.study-article-heading > h1:first-of-type {
+  margin: 0;
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -.055em;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.study-article-heading + .study-article-context { margin-top: 8px; }

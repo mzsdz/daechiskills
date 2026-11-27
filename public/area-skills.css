@@ -24,8 +24,6 @@
 .area-guide [hidden] { display: none !important; }
 .area-guide a { color: var(--guide-accent); text-underline-offset: 3px; }
 .area-guide :is(a, summary):focus-visible { outline: 2px solid var(--guide-accent); outline-offset: 3px; }
-.area-guide-heading h1 { margin: 0; font-size: clamp(28px, 5vw, 42px); line-height: 1.2; letter-spacing: -.055em; }
-.area-guide-heading > p { margin: 0 0 4px; color: var(--guide-muted); font-size: 11px; font-weight: 800; letter-spacing: .14em; }
 .area-guide-lead { max-width: 630px; margin: 14px 0 22px; color: var(--guide-muted); font-size: 15px; word-break: keep-all; }
 .area-guide-lead p, .area-guide-instruction { margin: 0; }
 .area-guide h2 { margin: 0 0 10px; font-size: 20px; letter-spacing: -.04em; }
