@@ -1,0 +1,35 @@
+.formula-index [hidden] { display: none; }
+.formula-search-field { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 10px 0 15px; border: 1px solid #aebdb2; border-radius: 10px; background: var(--editorial-surface); color: var(--editorial-accent); }
+.formula-search-field:focus-within { outline: 2px solid var(--editorial-accent); outline-offset: 2px; }
+.formula-search-icon { position: relative; flex: none; width: 13px; height: 13px; border: 1.5px solid currentColor; border-radius: 50%; }
+.formula-search-icon::after { content: ''; position: absolute; top: 9px; left: 9px; width: 6px; height: 1.5px; border-radius: 1px; background: currentColor; transform: rotate(45deg); transform-origin: left center; }
+.formula-search-field input { flex: 1; min-width: 0; padding: 0; border: 0; outline: none; background: transparent; color: var(--editorial-ink); font: inherit; font-size: 16px; }
+.formula-search-field input::placeholder { color: var(--editorial-muted); opacity: 1; }
+.formula-search-field input::-webkit-search-cancel-button { appearance: none; }
+.formula-search-clear, .formula-search-examples button { color: var(--editorial-accent); background: transparent; font: inherit; cursor: pointer; }
+.formula-search-clear { width: 40px; min-height: 44px; padding: 0; border: 0; font-size: 24px; }
+.formula-search-examples { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.formula-search-examples button { min-height: 36px; padding: 0 10px; border: 1px solid var(--editorial-line); border-radius: 5px; font-size: 12px; font-weight: 700; }
+.formula-search-examples button:hover { background: var(--editorial-accent-tint); }
+.formula-index :is(button, summary, a):focus-visible { outline: 2px solid var(--editorial-accent); outline-offset: 2px; }
+.formula-unit { margin-top: 17px; }
+.formula-unit-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding-bottom: 8px; border-bottom: 1px solid #aebdb2; }
+.formula-unit-heading h2 { margin: 0; font-size: 15px; letter-spacing: -.02em; }
+.formula-unit-count { font-size: 12px; color: var(--editorial-muted); }
+.formula-entry { border-bottom: 1px solid var(--editorial-line); }
+.formula-entry summary { display: flex; align-items: center; gap: 12px; min-height: 71px; padding: 10px 4px 10px 2px; cursor: pointer; list-style: none; }
+.formula-entry summary::-webkit-details-marker { display: none; }
+.formula-entry summary::after { content: ''; flex: none; width: 7px; height: 7px; margin-left: auto; margin-right: 3px; color: var(--editorial-accent); border-right: 1.5px solid; border-bottom: 1.5px solid; transform: translateY(-2px) rotate(45deg); }
+.formula-entry[open] summary::after { transform: translateY(2px) rotate(225deg); }
+.formula-entry summary strong { display: block; font-size: 16px; font-weight: 800; letter-spacing: -.035em; }
+.formula-entry[open] summary strong { color: var(--editorial-accent); }
+.formula-entry summary > span > span { display: block; color: var(--editorial-muted); font-size: 12px; word-break: keep-all; }
+.formula-entry summary:hover strong { text-decoration: underline; text-underline-offset: .2em; }
+.formula-entry-content { padding-bottom: 12px; }
+.formula-equation { display: grid; place-items: center; min-height: 82px; padding: 8px; border: 1px solid #d3e2d9; border-radius: 8px; background: var(--editorial-accent-tint); color: var(--editorial-accent-hover); }
+.formula-equation math { font-size: 25px; }
+.formula-entry-content p { margin: 10px 0 2px; color: var(--editorial-muted); font-size: 13px; word-break: keep-all; }
+.formula-entry-content p strong { display: block; color: var(--editorial-ink); }
+.formula-entry-content a { display: inline-flex; align-items: center; gap: 5px; min-height: 44px; color: var(--editorial-accent); font-size: 13px; font-weight: 800; text-underline-offset: .2em; }
+.formula-search-status { margin: 15px 0 0; color: var(--editorial-muted); }
+.formula-search-status[data-has-results], .formula-search-status:empty { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); }
